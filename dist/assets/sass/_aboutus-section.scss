@@ -1,0 +1,117 @@
+.aboutus-section {
+    background-color: $white-color;
+
+    &__image {
+        position: relative;
+        margin-bottom: 5em;
+        max-height: 350px;
+        overflow: hidden;
+        z-index: 0;
+
+        img {
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: none;
+            top: 30px;
+            left: -30px;
+            width: 100%;
+            height: 100%;
+            background-color: $light-gray-color;
+            z-index: -1;
+        }
+    }
+
+    &__counters {
+        position: relative;
+        margin-bottom: 1em;
+        padding: 1em 0;
+        background-color: $light-gray-color;
+        background-size: auto;
+    }
+
+    &__counter {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 3em 0;
+        text-align: center;
+
+        &:not(:first-child) {
+            border-top: 1px dashed $main-color;
+        }
+
+        span:nth-child(1) {
+            color: $main-color;
+            font-size: 5.5rem;
+            font-weight: 700;
+        }
+
+        span:nth-child(2) {
+            display: flex;
+            align-items: center;
+            color: $gray-color;
+            font-size: 1.4rem;
+            font-weight: 500;
+            text-transform: uppercase;
+
+            i {
+                margin-right: 0.4em;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .aboutus-section {
+        &__counters {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        &__counter {
+            padding: 3em 2em;
+            width: 50%;
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                border-right: 1px dashed $main-color;
+            }
+
+            &:nth-child(2) {
+                border-top: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .aboutus-section {
+        .wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        &__image {
+            width: 50%;
+            max-height: none;
+            overflow: visible;
+
+            &::before {
+                display: block;
+            }
+        }
+
+        &__content {
+            padding-left: 4.4em;
+            width: 50%;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+doctype html
+html(lang="pl")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="icon", href="assets/img/favicon.png", type="image/png")
+    meta(name="robots" content="noindex")
+    meta(http-equiv='refresh', content='4; url=index.html')
+    title CleanPro - Error Page
+    link(rel="stylesheet", href="assets/css/style.css")
+    script(src="https://kit.fontawesome.com/0c51b4e0d7.js", crossorigin="anonymous")
+  body
+    include modules/header-zero
+    main
+        section.error-page.section
+            h2.error-page__title Nie ma takiej strony...
+            img.error-page__image(src="./assets/img/error-page.png")
+    include modules/footer-zero
+    script(src="script.js") 

@@ -1,0 +1,50 @@
+header.header
+    .header__top
+        .wrapper
+            .header__contact
+                .header__phone
+                    <i class="fas fa-phone-volume"></i>
+                    a(href="tel:+48222333444") +48 222 333 444
+                .header__email
+                    <i class="far fa-envelope"></i>
+                    a(href="mailto:kontakt@cleanpro.pl") kontakt@domena.pl
+            .header__social
+                a(href="/", target="_blank")
+                    <i class="fab fa-facebook-f"></i>
+                a(href="/", target="_blank")
+                    <i class="fab fa-instagram"></i>
+                a(href="/", target="_blank")
+                    <i class="fab fa-youtube"></i>
+                a(href="/", target="_blank")
+                    <i class="fab fa-twitter"></i>
+    .header__navbar
+        .wrapper
+            a.header__logo(href="/")
+                <i class="fas fa-broom"></i>
+                p CleanPro
+            nav.nav
+                ul.nav__list
+                    li
+                        a(href="/", data-current="home") Home
+                    li
+                        a(href="/#aboutus", data-current="aboutus") O nas
+                    li
+                        a(href="/#services", data-current="services") Usługi
+                        span.nav__chevron
+                        ul.nav__dropdown
+                            li
+                                a(href="uslugi/sprzatanie-biura.html", data-current="office") Sprzątanie biura
+                            li
+                                a(href="uslugi/sprzatanie-domu.html", data-current="house") Sprzątanie domu
+                            li
+                                a(href="uslugi/sprzatanie-mieszkania.html", data-current="apartment") Sprzątanie mieszkania
+                            li
+                                a(href="uslugi/sprzatanie-po-remoncie.html" ,data-current="repair") Sprzątanie po remoncie
+                    li
+                        a(href="zamowic-usluge.html", data-current="order") Zamówić usługę
+                    li
+                        a(href="kontakt.html", data-current="contact") Kontakt
+            .header__bars
+                span.header__bars-item
+                span.header__bars-item
+                span.header__bars-item

@@ -1,0 +1,236 @@
+@import 'animations';
+@import 'fonts';
+@import 'variables';
+@import 'header';
+@import 'slider';
+@import 'aboutus-section';
+@import 'services-section';
+@import 'cookie';
+@import 'choose-section';
+@import 'portfolio-section';
+@import 'steps-section';
+@import 'faq-section';
+@import 'hero-section';
+@import 'service';
+@import 'order';
+@import 'contact';
+@import 'footer';
+@import 'lightbox-modal';
+@import 'error-page';
+@import 'callback';
+@import 'modal';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        background-color: $light-color;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $light-color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $main-color;
+    }
+}
+
+.section {
+    padding: 5em 1em;
+}
+
+.section__suptitle {
+    margin-bottom: 1.7em;
+    color: $main-color;
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+
+    .fas {
+        margin-right: 0.5em;
+        font-size: clamp(1.8rem, 3vw, 2.2rem);
+    }
+}
+
+.section__title {
+    margin-bottom: 0.8em;
+    color: $black-color;
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.button-link {
+    display: block;
+    padding: 0.9em 1.8em;
+    width: max-content;
+    color: $white-color;
+    font-size: 1.4rem;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    background-color: $main-color;
+    border: 2px solid transparent;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+    i {
+        padding-left: 0.8em;
+        font-size: 1.3rem;
+    }
+
+    &:hover {
+        color: $main-color;
+        background-color: $white-color;
+        border-color: $main-color;
+    }
+}
+
+.button-submit {
+    margin-top: 1.5em;
+    padding: 0.9em 1.8em;
+    width: max-content;
+    color: $white-color;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: none;
+    border-radius: 4px;
+    background-color: $main-color;
+    border: 2px solid transparent;
+    transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        color: $main-color;
+        background-color: $white-color;
+        border-color: $main-color;
+    }
+}
+
+.section__description {
+    margin-bottom: 2.8em;
+    color: $gray-color;
+    font-size: 1.6rem;
+    line-height: 1.7;
+}
+
+.status__image {
+    display: block;
+    margin: 0 auto;
+    animation: spinnerUp 0.8s ease-in-out 0s forwards;
+}
+
+.status__text {
+    color: $black-color;
+    font-size: 2rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    position: relative;
+    appearance: none;
+    margin: 0;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    max-width: 25px;
+    max-height: 25px;
+    background: none;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &::before {
+        background-color: transparent;
+        border: 3px solid $main-color;
+        z-index: 1;
+    }
+
+    &::after {
+        background-color: $main-color;
+        transform: scale(0);
+        transition: transform 0.3s;
+        z-index: 1;
+    }
+
+    &:checked::after {
+        transform: scale(0.5);
+    }
+}
+
+input[type="radio"] {
+    position: relative;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    &::before {
+        background-color: transparent;
+        border: 3px solid $main-color;
+        z-index: 1;
+    }
+
+    &::after {
+        background-color: $main-color;
+        transform: scale(0);
+        transition: transform 0.3s;
+        z-index: 1;
+    }
+
+    &:checked::after {
+        transform: scale(0.5);
+    }
+}

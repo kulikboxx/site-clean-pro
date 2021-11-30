@@ -1,0 +1,127 @@
+.portfolio-section {
+    background-color: $light-color;
+
+    &__tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    &__tab {
+        position: relative;
+        padding: 0.5em;
+        width: max-content;
+        color: $black-color;
+        font-size: 1.5rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        text-align: center;
+        transition: color 0.2s;
+        cursor: pointer;
+        user-select: none;
+        z-index: 0;
+
+        &:before {
+            display: none;
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: calc(50% - 5px);
+            width: 10px;
+            height: 10px;
+            background-color: $main-color;
+            border-radius: 50%;
+            transition: width 0.2s;
+            z-index: -1;
+        }
+
+        &:hover,
+        &.active {
+            color: $main-color;
+        }
+
+        &:hover::before {
+            display: block;
+            animation: showUp .8s;
+        }
+
+        &.active::before {
+            display: block;
+            animation: showUp .8s;
+        }
+    }
+
+    &__gallery {
+        display: grid;
+        grid-template-columns: minmax(200px, 1fr);
+        margin-top: 2em;
+        gap: 1em;
+    }
+
+    &__item {
+        position: relative;
+        width: 100%;
+        transition: transform 0.7s;
+        transform-origin: center;
+        overflow: hidden;
+        user-select: none;
+        z-index: 0;
+
+        &.active {
+            animation: growImages 0.5s ease-in-out 0s forwards;
+        }
+
+        &.disabled {
+            animation: shrinkImages 0.5s ease-in-out 0s forwards;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &::before {
+            content: "\f055";
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            color: $white-color;
+            font-size: 4rem;
+            font-family: 'FontAwesome';
+            background-color: $main-color;
+            transform: scale(0.7);
+            opacity: 0;
+            transform-origin: center;
+            transition: transform 0.3s, opacity 0.3s;
+            cursor: pointer;
+            z-index: 0;
+        }
+
+        &:hover::before {
+            transform: scale(1);
+            opacity: 0.9;
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .portfolio-section {
+        &__gallery {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .portfolio-section {
+        &__gallery {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}

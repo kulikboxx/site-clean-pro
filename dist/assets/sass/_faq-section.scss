@@ -1,0 +1,55 @@
+.faq-section {
+    background-image: url('../img/faq-section/background.png');
+    background-repeat: repeat;
+    background-position: right center;
+
+    &__accordions {
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        .accordion {
+            padding: 3em;
+            background-color: $white-color;
+
+            &:not(:last-of-type) {
+                border-bottom: 1px solid #ddd;
+            }
+
+            &__title {
+                position: relative;
+                padding-right: 2em;
+                color: $main-color;
+                font-size: 1.8rem;
+
+                &::before {
+                    content: "+";
+                    position: absolute;
+                    top: 50%;
+                    right: 4px;
+                    transform: translateY(-50%);
+                    color: $main-color;
+                    font-size: 3.4rem;
+                    transition: transform 0.4s;
+                    cursor: pointer;
+                }
+
+                &.active::before {
+                    transform: translateY(-50%) rotateZ(45deg);
+                }
+            }
+
+            &__content {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s;
+            }
+
+            &__description {
+                padding: 1.5em 1em 0 1em;
+                height: max-content;
+                color: $gray-color;
+                font-size: 1.6rem;
+                line-height: 1.7;
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+doctype html
+html(lang="pl")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="icon", href="assets/img/favicon.png", type="image/png")
+    title CleanPro - Kontakt
+    link(rel="stylesheet", href="assets/css/style.css")
+    script(src="https://kit.fontawesome.com/0c51b4e0d7.js", crossorigin="anonymous")
+  body(data-section="contact")
+    include modules/header-zero
+    main
+        section.hero
+            h1.hero__title Kontakt
+            .hero__links
+                a(href="/") Home
+                span /
+                a(href="kontakt.html") Kontakt
+        section.contact.section
+            .wrapper
+                h2.section__title Skontaktuj się z nami
+                p.contact__description.section__description Jesteśmy dumni ze wszystkiego, co robimy! Kontrola nad produktami pozwala nam zapewnić klientom najwyższą jakość obsługi.
+                .contact__container
+                    .contact__boxes
+                        .contact__box
+                            h3.contact__info
+                                <i class="fas fa-phone-alt"></i> Numer Telefonu:
+                            a(href="tel:+48222333444") +48 222 333 444
+                        .contact__box
+                            h3.contact__info
+                                <i class="far fa-envelope"></i> Adres E-mail:
+                            a(href="mailto:kontakt@cleanpro.pl") kontakt@cleanpro.pl
+                        .contact__box
+                            h3.contact__info
+                                <i class="fas fa-map-marker-alt"></i> Siedziba Firmy
+                            a(href="https://goo.gl/maps/L4FkDNdsGj5PRUUy7", target="_blank") Listopadowa 12, 02-496 Warszawa
+                        .contact__box
+                            h3.contact__info
+                                <i class="far fa-clock"></i> Godziny Otwarcia:
+                            span Poniedziałek - Piątek, 09:00 - 18:00
+                    form.contact__form.form
+                        .form__inputs
+                            .form__box
+                                label Imię i nazwisko
+                                input(type="text", class="form__input", name="name")
+                                span.form__error
+                            .form__box
+                                label Telefon
+                                input(type="tel", class="form__input", name="phone")
+                                span.form__error
+                            .form__box
+                                label E-mail
+                                input(type="email", class="form__input", name="email")
+                                span.form__error
+                            .form__box
+                                label Usługa
+                                select(name="service", class="form__input")
+                                    option(value="sprzątanie biura") Sprzątanie biura
+                                    option(value="sprzątanie domu") Sprzątanie domu
+                                    option(value="sprzątanie mieszkania") Sprzątanie mieszkania
+                                    option(value="sprzątanie po remoncie") Sprzątanie po remoncie
+                                    option(value="inny temat rozmowy") Inny temat rozmowy
+                            .form__box.form__textarea
+                                label Wiadomość
+                                textarea(name="message", class="form__input")
+                            .form__box.form__checkbox
+                                input(type="checkbox", name="agreement", class="form__input", id="agreement", value="Administratorem danych osobowych jest firma CleanPro, która przetwarza dane osobowe w celach i na zasadach określonych w Polityce prywatności. Wyrażenie zgody jest dobrowolne. Przyjmuję do wiadomości, że przysługuje mi prawo do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem dotychczasowego przetwarzania.")
+                                label(for="agreement") Administratorem danych osobowych jest firma CleanPro, która przetwarza dane osobowe w celach i na zasadach określonych w Polityce prywatności. Wyrażenie zgody jest dobrowolne. Przyjmuję do wiadomości, że przysługuje mi prawo do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem dotychczasowego przetwarzania.*
+                            button(type="submit", class="form__submit button-submit") Wyślij formularz
+    include modules/footer-zero
+    script(src="script.js") 

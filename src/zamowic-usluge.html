@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="assets/img/favicon.png" type="image/png">
+    <title>CleanPro - Zamówić usługę</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/0c51b4e0d7.js" crossorigin="anonymous"></script>
+  </head>
+  <body data-section="order">
+    <header class="header">
+      <div class="header__top">
+        <div class="wrapper">
+          <div class="header__contact">
+            <div class="header__phone"><i class="fas fa-phone-volume"></i><a href="tel:+48222333444">+48 222 333 444</a></div>
+            <div class="header__email"><i class="far fa-envelope"></i><a href="mailto:kontakt@cleanpro.pl">kontakt@domena.pl</a></div>
+          </div>
+          <div class="header__social"><a href="/" target="_blank"><i class="fab fa-facebook-f"></i></a><a href="/" target="_blank"><i class="fab fa-instagram"></i></a><a href="/" target="_blank"><i class="fab fa-youtube"></i></a><a href="/" target="_blank"><i class="fab fa-twitter"></i></a></div>
+        </div>
+      </div>
+      <div class="header__navbar">
+        <div class="wrapper"><a class="header__logo" href="/"><i class="fas fa-broom"></i>
+            <p>CleanPro</p></a>
+          <nav class="nav">
+            <ul class="nav__list">
+              <li><a href="/" data-current="home">Home</a></li>
+              <li><a href="/#aboutus" data-current="aboutus">O nas</a></li>
+              <li><a href="/#services" data-current="services">Usługi</a><span class="nav__chevron"></span>
+                <ul class="nav__dropdown">
+                  <li><a href="uslugi/sprzatanie-biura.html" data-current="office">Sprzątanie biura</a></li>
+                  <li><a href="uslugi/sprzatanie-domu.html" data-current="house">Sprzątanie domu</a></li>
+                  <li><a href="uslugi/sprzatanie-mieszkania.html" data-current="apartment">Sprzątanie mieszkania</a></li>
+                  <li><a href="uslugi/sprzatanie-po-remoncie.html" data-current="repair">Sprzątanie po remoncie</a></li>
+                </ul>
+              </li>
+              <li><a href="zamowic-usluge.html" data-current="order">Zamówić usługę</a></li>
+              <li><a href="kontakt.html" data-current="contact">Kontakt</a></li>
+            </ul>
+          </nav>
+          <div class="header__bars"><span class="header__bars-item"></span><span class="header__bars-item"></span><span class="header__bars-item"></span></div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <h1 class="hero__title">Oblicz wartość usługi</h1>
+        <div class="hero__links"><a href="/">Home</a><span>/</span><a href="zamowic-usluge.html">Zamówić usługę</a></div>
+      </section>
+      <section class="order section">
+        <div class="wrapper">
+          <h2 class="section__title">Zamów usługę</h2>
+          <p class="order__description section__description">Stworzyliśmy specjalny kalkulator za pomocą którego możesz obliczyć koszt sprzątania lokalu. <br><strong>Pakiet Miesięczny składa się z 4 usług, Roczny - z 48 usług.</strong></p>
+          <form class="order__form form" data-calculator>
+            <div class="form__wrapper">
+              <h3 class="form__heading">Wybierz pakiet</h3>
+              <div class="form__box packages">
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="package" id="once" data-discount="1" value="Jednorazowa usługa" checked>
+                  <label for="once">Jednorazowa usługa</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="package" id="month" data-discount="0.9" value="Miesięczny">
+                  <label for="month">Miesięczny</label><span>Zniżka 10%</span>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="package" id="year" data-discount="0.8" value="Roczny">
+                  <label for="year">Roczny</label><span>Zniżka 20%</span>
+                </div>
+              </div>
+              <div class="form__box services">
+                <h3 class="form__heading">Wybierz usługę</h3>
+                <select class="form__input" name="service">
+                  <option value="Sprzątanie biura" data-service="office">Sprzątanie biura</option>
+                  <option value="Sprzątanie domu" data-service="house">Sprzątanie domu</option>
+                  <option value="Sprzątanie mieszkania" data-service="apartment">Sprzątanie mieszkania</option>
+                  <option value="Sprzątanie po remoncie" data-service="repair">Sprzątanie po remoncie</option>
+                </select>
+              </div>
+              <div class="form__box spaces">
+                <h3 class="form__heading">Wybierz metraż biura</h3>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="office" id="office1" data-price="250" value="do 50 m2">
+                  <label for="office1">do 50 m2 - 250 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="office" id="office2" data-price="450" value="51 - 100 m2">
+                  <label for="office2">51 - 100 m2 - 450 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="office" id="office3" data-price="670" value="101 - 150 m2">
+                  <label for="office3">101 - 150 m2 - 670 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="office" id="office4" data-price="900" value="151 - 200 m2">
+                  <label for="office4">151 - 200 m2 - 900 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="office" id="office5" data-price="1100" value="201 - 250 m2">
+                  <label for="office5">201 - 250 m2 - 1100 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="office" id="office6" data-price="1300" value="250+ m2">
+                  <label for="office6">250+ m2 - 1300 zł</label>
+                </div>
+              </div>
+              <div class="form__box spaces">
+                <h3 class="form__heading">Wybierz metraż domu</h3>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="house" id="house1" data-price="230" value="do 60 m2">
+                  <label for="house1">do 60 m2 - 230 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="house" id="house2" data-price="400" value="61 - 100 m2">
+                  <label for="house2">61 - 100 m2 - 400 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="house" id="house3" data-price="570" value="101 - 140 m2">
+                  <label for="house3">101 - 140 m2 - 570 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="house" id="house4" data-price="740" value="141 - 180 m2">
+                  <label for="house4">141 - 180 m2 - 740 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="house" id="house5" data-price="900" value="181 - 220 m2">
+                  <label for="house5">181 - 220 m2 - 900 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="house" id="house6" data-price="1050" value="220+ m2">
+                  <label for="house6">220+ m2 - 1050 zł</label>
+                </div>
+              </div>
+              <div class="form__box spaces">
+                <h3 class="form__heading">Wybierz metraż mieszkania</h3>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="apartment" id="apartment1" data-price="140" value="do 40 m2">
+                  <label for="apartment1">do 40 m2 - 140 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="apartment" id="apartment2" data-price="270" value="41 - 80 m2">
+                  <label for="apartment2">41 - 80 m2 - 270 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="apartment" id="apartment3" data-price="400" value="81 - 120 m2">
+                  <label for="apartment3">81 - 120 m2 - 400 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="apartment" id="apartment4" data-price="530" value="121 - 160 m2">
+                  <label for="apartment4">121 - 160 m2 - 530 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="apartment" id="apartment5" data-price="660" value="161 - 200 m2">
+                  <label for="apartment5">161 - 200 m2 - 660 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="apartment" id="apartment6" data-price="800" value="200+ m2">
+                  <label for="apartment6">200+ m2 - 800 zł</label>
+                </div>
+              </div>
+              <div class="form__box spaces">
+                <h3 class="form__heading">Wybierz metraż lokalu</h3>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="repair" id="repair1" data-price="400" value="do 50 m2">
+                  <label for="repair1">do 50 m2 - 400 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="repair" id="repair2" data-price="630" value="51 - 100 m2">
+                  <label for="repair2">51 - 100 m2 - 630 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="repair" id="repair3" data-price="850" value="101 - 150 m2">
+                  <label for="repair3">101 - 150 m2 - 850 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="repair" id="repair4" data-price="1100" value="151 - 200 m2">
+                  <label for="repair4">151 - 200 m2 - 1100 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="repair" id="repair5" data-price="1450" value="201 - 250 m2">
+                  <label for="repair5">201 - 250 m2 - 1450 zł</label>
+                </div>
+                <div class="form__radio">
+                  <input class="form__input" type="radio" name="repair" id="repair6" data-price="1700" value="250+ m2">
+                  <label for="repair6">250+ m2 - 1700 zł</label>
+                </div>
+              </div>
+              <h3 class="form__heading">Dodatkowe usługi</h3>
+              <div class="form__box additional">
+                <label>Mycie okien: 7 zł za m2 - wpisz ilość m2 </label>
+                <input class="form__input" type="number" name="window" value="0" min="0" data-price="7">
+              </div>
+              <div class="form__box additional">
+                <label>Pranie dywanów: 7 zł za m2 - wpisz ilość m2 </label>
+                <input class="form__input" type="number" name="rug" value="0" min="0" data-price="7">
+              </div>
+              <div class="form__box additional">
+                <label>Pranie tapicerki: 10 zł za m2 - wpisz ilość m2 </label>
+                <input class="form__input" type="number" name="upholstery" value="0" min="0" data-price="10">
+              </div>
+              <div class="form__box additional">
+                <label>Pranie wykładzin: 5 zł za m2 - wpisz ilość m2 </label>
+                <input class="form__input" type="number" name="covering" value="0" min="0" data-price="5">
+              </div>
+              <div class="form__box additional ironing">
+                <label>Prasowanie: 3 zł/szt - wpisz ilość szt </label>
+                <input class="form__input" type="number" name="ironing" value="0" min="0" data-price="3">
+              </div>
+              <div class="form__box total">
+                <label>Ogółem</label>
+                <input class="form__input form__total" type="text" name="total" value="0 zł" min="0" disabled>
+              </div>
+              <h3 class="form__heading">Podaj swoje dane:</h3>
+              <div class="form__box person">
+                <label>Imię i nazwisko</label>
+                <input class="form__input" type="text" name="name"><span class="form__error"></span>
+              </div>
+              <div class="form__box person">
+                <label>Telefon</label>
+                <input class="form__input" type="tel" name="phone"><span class="form__error"></span>
+              </div>
+              <div class="form__box person">
+                <label>E-mail</label>
+                <input class="form__input" type="email" name="email"><span class="form__error"></span>
+              </div>
+              <div class="form__box person">
+                <label>Adres</label>
+                <input class="form__input" type="text" name="address"><span class="form__error"></span>
+              </div>
+              <div class="form__box message">
+                <label>Wiadomość</label>
+                <textarea class="form__input" name="message"></textarea>
+              </div>
+              <div class="form__box agreement">
+                <input class="form__input" type="checkbox" name="agreement" id="agreement" value="Administratorem danych osobowych jest firma CleanPro, która przetwarza dane osobowe w celach i na zasadach określonych w Polityce prywatności. Wyrażenie zgody jest dobrowolne. Przyjmuję do wiadomości, że przysługuje mi prawo do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem dotychczasowego przetwarzania.">
+                <label for="agreement">Administratorem danych osobowych jest firma CleanPro, która przetwarza dane osobowe w celach i na zasadach określonych w Polityce prywatności. Wyrażenie zgody jest dobrowolne. Przyjmuję do wiadomości, że przysługuje mi prawo do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem dotychczasowego przetwarzania.*</label>
+              </div>
+              <button class="form__submit button-submit" type="submit">Wyślij formularz</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer__top">
+          <div class="footer__col">
+            <h4 class="footer__title">Kim jesteśmy</h4>
+            <p class="footer__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia a aspernatur iusto, consectetur omnis obcaecati cupiditate quasi aliquid esse placeat qui molestias sint nemo accusantium ex! Deleniti nobis dolore quas veritatis assumenda explicabo ea facere quisquam reiciendis autem.</p>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Godziny otwarcia</h4>
+            <ul>
+              <li><span>Poniedziałek</span><span>09:00 - 18:00</span></li>
+              <li><span>Wtorek</span><span>09:00 - 18:00</span></li>
+              <li><span>Środa</span><span>09:00 - 18:00</span></li>
+              <li><span>Czwartek</span><span>09:00 - 18:00</span></li>
+              <li><span>Piątek</span><span>09:00 - 18:00</span></li>
+              <li><span>Sobota</span><span>Biuro nieczynne</span></li>
+              <li><span>Niedziela</span><span>Biuro nieczynne</span></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Dla klientów</h4>
+            <ul>
+              <li><a href="/#aboutus">O nas</a></li>
+              <li><a href="uslugi/sprzatanie-biura.html">Sprzątanie biura</a></li>
+              <li><a href="uslugi/sprzatanie-domu.html">Sprzątanie domu</a></li>
+              <li><a href="uslugi/sprzatanie-mieszkania.html">Sprzątanie mieszkania</a></li>
+              <li><a href="uslugi/sprzatanie-po-remoncie.html">Sprzątanie po remoncie</a></li>
+              <li><a href="zamowic-usluge.html">Zamówić usługę</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+              <li><a href="polityka-prywatnosci.html">Polityka prywatności</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <h4 class="footer__title">Kontakt z nami</h4>
+            <ul>
+              <li><a href="https://goo.gl/maps/L4FkDNdsGj5PRUUy7" target="_blank">Listopadowa 12, 02-496 Warszawa</a></li>
+              <li><a href="tel:+48222333444">+48 222 333 444</a></li>
+              <li><a href="mailto:kontakt@cleanpro.pl">kontakt@cleanpro.pl</a></li>
+              <li class="footer__social"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="#"><i class="fab fa-youtube"></i></a><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom"> 
+          <p>© <span class="footer__year">2021 </span>CLEANPRO. Wszelkie prawa zastrzeżone.
+            Realizacja: <a href="https://silverwebgroup.pl" target="_blank">SILVER WEB GROUP</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"> </script>
+  </body>
+</html>

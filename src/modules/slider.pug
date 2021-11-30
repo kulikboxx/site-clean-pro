@@ -1,0 +1,47 @@
+.slider
+    .slider__decor
+        img(src="assets/img/slider/wave.png", alt="image description")
+    .slider__social
+        a(href="/", target="_blank") Facebook
+        a(href="/", target="_blank") Instagram
+        a(href="/", target="_blank") Youtube
+        a(href="/", target="_blank") Twitter
+    .slider__wrapper
+        .slider__item
+            picture
+                source(media="(max-width: 639px)", srcset="assets/img/slider/1-sm.jpg")
+                source(media="(min-width: 640px) and (max-width: 1279px)", srcset="assets/img/slider/1-md.jpg")
+                img(src="assets/img/slider/1-xl.jpg", alt="image description")
+            .slider__content
+                h3.slider__supertitle Świadczymy wysokiej jakości usługi
+                h1.slider__title Profesjonalne sprzątanie biur
+                a.slider__button.button-link(href="#services") Wybierz usługę
+                    <i class="fas fa-chevron-right"></i> 
+        .slider__item
+            picture
+                source(media="(max-width: 639px)", srcset="assets/img/slider/2-sm.jpg")
+                source(media="(min-width: 640px) and (max-width: 1279px)", srcset="assets/img/slider/2-md.jpg")
+                img(src="assets/img/slider/2-xl.jpg", alt="image description")
+            .slider__content
+                h3.slider__supertitle Świadczymy wysokiej jakości usługi
+                h2.slider__title Profesjonalne sprzątanie domów
+                a.slider__button.button-link(href="#services") Wybierz usługę
+                    <i class="fas fa-chevron-right"></i>
+        .slider__item
+            picture
+                source(media="(max-width: 639px)", srcset="assets/img/slider/3-sm.jpg")
+                source(media="(min-width: 640px) and (max-width: 1279px)", srcset="assets/img/slider/3-md.jpg")
+                img(src="assets/img/slider/3-xl.jpg", alt="image description")
+            .slider__content
+                h3.slider__supertitle Świadczymy wysokiej jakości usługi
+                h2.slider__title Profesjonalne sprzątanie mieszkań
+                a.slider__button.button-link(href="#services") Wybierz usługę
+                    <i class="fas fa-chevron-right"></i>
+    .bullets
+        .bullets__wrapper
+            .bullets__item
+                span
+            .bullets__item
+                span
+            .bullets__item
+                span

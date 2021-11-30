@@ -1,0 +1,17 @@
+.error-page {
+    padding: 2em;
+
+    &__title {
+        margin-bottom: 1em;
+        font-size: 2.4rem;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    &__image {
+        display: block;
+        margin: 0 auto;
+        width: 80vw;
+        max-width: 400px;
+    }
+}

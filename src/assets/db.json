@@ -1,0 +1,59 @@
+{
+    "services": {
+        "cards": [
+            {
+                "id": "0",
+                "icon": "<i class='fas fa-city'></i>",
+                "title": "Sprzątanie biura",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, atque tenetur! Non praesentium molestiae qui.",
+                "link": "uslugi/sprzatanie-biura.html"
+            },
+            {
+                "id": "1",
+                "icon": "<i class='fas fa-home'></i>",
+                "title": "Sprzątanie domu",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, atque tenetur! Non praesentium molestiae qui.",
+                "link": "uslugi/sprzatanie-domu.html"
+            },
+            {
+                "id": "2",
+                "icon": "<i class='fas fa-door-open'></i>",
+                "title": "Sprzątanie mieszkania",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, atque tenetur! Non praesentium molestiae qui.",
+                "link": "uslugi/sprzatanie-mieszkania.html"
+            },
+            {
+                "id": "3",
+                "icon": "<i class='fas fa-hammer'></i>",
+                "title": "Sprzątanie po remoncie",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, atque tenetur! Non praesentium molestiae qui.",
+                "link": "uslugi/sprzatanie-po-remoncie.html"
+            }
+        ]
+    },
+    "choose": {
+        "cards": [
+            {
+                "id": "0",
+                "src": "assets/img/choose-section/image-1.jpg",
+                "alt": "image description",
+                "title": "Gwarancja satysfakcji!",
+                "description": "Wiemy, że jeśli pokochasz naszą usługę, polecisz nas rodzinie i znajomym, więc Twoja satysfakcja jest dla nas priorytetem. Jeśli jesteś niezadowolony z naszych usług w jakikolwiek sposób. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus nulla officiis aut debitis atque iure laborum. Nam, nulla! Magnam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias vitae dolorem perspiciatis minima natus optio iusto unde, quae et!"
+            },
+            {
+                "id": "1",
+                "src": "assets/img/choose-section/image-2.jpg",
+                "alt": "image description",
+                "title": "Gwarancja satysfakcji!",
+                "description": "Wiemy, że jeśli pokochasz naszą usługę, polecisz nas rodzinie i znajomym, więc Twoja satysfakcja jest dla nas priorytetem. Jeśli jesteś niezadowolony z naszych usług w jakikolwiek sposób. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus nulla officiis aut debitis atque iure laborum. Nam, nulla! Magnam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias vitae dolorem perspiciatis minima natus optio iusto unde, quae et!"
+            },
+            {
+                "id": "2",
+                "src": "assets/img/choose-section/image-3.jpg",
+                "alt": "image description",
+                "title": "Gwarancja satysfakcji!",
+                "description": "Wiemy, że jeśli pokochasz naszą usługę, polecisz nas rodzinie i znajomym, więc Twoja satysfakcja jest dla nas priorytetem. Jeśli jesteś niezadowolony z naszych usług w jakikolwiek sposób. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum natus nulla officiis aut debitis atque iure laborum. Nam, nulla! Magnam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores molestias vitae dolorem perspiciatis minima natus optio iusto unde, quae et!"
+            }
+        ]
+    }
+}

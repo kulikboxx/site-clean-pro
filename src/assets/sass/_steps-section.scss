@@ -1,0 +1,85 @@
+.steps-section {
+    background-color: $white-color;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+    &__cards {
+        .card {
+            padding: 4em;
+            width: 100%;
+            text-align: center;
+            transition: transform 0.3s;
+
+            &__icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 auto 1em;
+                width: 120px;
+                height: 125px;
+                color: $main-color;
+                font-size: 4rem;
+                background-color: $white-color;
+                border-bottom: 5px solid $main-color;
+                border-radius: 50%;
+                transition: color 0.3s, background-color 0.3s, border-bottom 0.3s, box-shadow 0.3s;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+            }
+
+            &__title {
+                position: relative;
+                margin-bottom: 2em;
+                color: $black-color;
+                font-size: 2rem;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                transition: color 0.3s;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: -20px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 50px;
+                    height: 4px;
+                    background-color: $main-color;
+                    transition: width 0.3s;
+                }
+            }
+
+            &__description {
+                color: $gray-color;
+                font-size: 1.6rem;
+                line-height: 1.7;
+            }
+
+            &:hover {
+                transform: translateY(-5%);
+
+                .card__icon {
+                    color: $white-color;
+                    background-color: $main-color;
+                    border-bottom: none;
+                    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+                }
+
+                .card__title {
+                    color: $main-color;
+                }
+
+                .card__title::before {
+                    width: 150px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .steps-section {
+        &__cards {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}

@@ -1,0 +1,165 @@
+.contact {
+    &__boxes {
+        margin-bottom: 3em;
+    }
+
+    &__box {
+        padding: 1.5em 0;
+
+        a,
+        span {
+            display: block;
+            margin-left: 2em;
+            width: max-content;
+            color: $black-color;
+            font-size: 1.6rem;
+            text-decoration: none;
+
+            &:hover {
+                color: $main-color;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__info {
+        margin-bottom: 0.3em;
+        color: $black-color;
+        font-size: 1.8rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+
+        i {
+            margin-right: 0.3em;
+            width: 21px;
+            color: $main-color;
+        }
+    }
+
+    .form {
+        &__box {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+
+            label {
+                margin-bottom: 0.3em;
+                color: $black-color;
+                font-size: 1.4rem;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+            }
+
+            span.form__error {
+                position: absolute;
+                top: 27px;
+                right: 3px;
+                color: #ff0000;
+                font-size: 1.1rem;
+            }
+        }
+
+        &__input:not(input[type="checkbox"]) {
+            margin-bottom: 1.2em;
+            padding: 1em;
+            width: 100%;
+            color: $black-color;
+            font-size: 1.5rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            background-color: $light-color;
+            border: none;
+
+            &:focus {
+                outline: 1px solid $main-color;
+            }
+
+            &.error {
+                outline: 1px solid #ff0000;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        &__checkbox {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input[type="checkbox"] {
+                margin: 0 0 1em 0;
+
+                &.error {
+                    outline: 2px solid #ff0000;
+                }
+            }
+
+            label {
+                margin: 0;
+                color: $gray-color;
+                font-weight: 700;
+                font-family: 'Roboto', sans-serif;
+                line-height: 1.5;
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    .contact {
+        &__boxes {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: flex-start;
+        }
+
+        &__box {
+            width: 49%;
+        }
+
+        .form {
+            &__inputs {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            &__box {
+                width: 48.5%;
+            }
+
+            &__textarea,
+            &__checkbox {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .contact {
+        &__container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__boxes {
+            flex-direction: column;
+            justify-content: flex-start;
+            width: 30%;
+            min-width: 330px;
+        }
+
+        &__box {
+            width: 100%;
+        }
+
+        &__form {
+            width: calc(100% - 330px);
+        }
+    }
+}

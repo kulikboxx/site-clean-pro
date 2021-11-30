@@ -1,0 +1,128 @@
+.footer {
+    position: relative;
+    padding: 6em 1.5em 0;
+    background-color: $dark-blue-color;
+    overflow: hidden;
+    z-index: 0;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        filter: grayscale(100%);
+        z-index: -1;
+    }
+
+    &__top {
+        padding-bottom: 1em;
+    }
+
+    &__col {
+        &:not(:last-of-type) {
+            margin-bottom: 3em;
+        }
+
+        ul {
+            list-style: none;
+
+            li {
+                padding: 0.5em 0;
+                color: $light-gray-color;
+                font-size: 1.5rem;
+                font-weight: 300;
+
+                &:not(.footer__social) {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                &:hover {
+                    color: $main-color;
+                }
+
+                a {
+                    color: $light-gray-color;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: 0.7em;
+        color: $gray-color;
+        font-size: 2rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        padding-top: 0.5em;
+        color: $light-color;
+        font-size: 1.5rem;
+        line-height: 1.7;
+    }
+
+    &__social {
+        a {
+            margin-right: 2em;
+        }
+    }
+
+    &__bottom {
+        padding: 2em 0;
+        color: $light-gray-color;
+        font-size: 1.2rem;
+        border-top: 1px solid $gray-color;
+
+        a {
+            color: $light-gray-color;
+            text-decoration: none;
+
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}
+
+@media (min-width: 650px) {
+    .footer {
+        &__top {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__col {
+            width: 47%;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .footer {
+        &__col {
+            &:nth-child(1) {
+                width: 24%;
+            }
+
+            &:nth-child(2) {
+                width: 25%;
+            }
+
+            &:nth-child(3) {
+                width: 17%;
+            }
+
+            &:nth-child(4) {
+                width: 22%;
+            }
+        }
+    }
+}

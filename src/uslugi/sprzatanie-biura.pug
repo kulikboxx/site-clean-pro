@@ -1,0 +1,46 @@
+doctype html
+html(lang="pl")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="icon", href="../assets/img/favicon.png", type="image/png")
+    title CleanPro - Sprzątanie biura
+    link(rel="stylesheet", href="../assets/css/style.css")
+    script(src="https://kit.fontawesome.com/0c51b4e0d7.js", crossorigin="anonymous")
+  body(data-section="office")
+    include ../modules/header-first
+    main
+        section.hero
+            h1.hero__title Sprzątanie biura
+            .hero__links
+                a(href="/") Home
+                span /
+                a(href="/#services") Usługi
+                span /
+                a(href="sprzatanie-biura.html") Sprzątanie biura
+        section.service.section
+            .wrapper
+                nav.service__nav
+                    ul
+                        li
+                            a.active(href="sprzatanie-biura.html") Sprzątanie biura
+                        li
+                            a(href="sprzatanie-domu.html") Sprzątanie domu
+                        li
+                            a(href="sprzatanie-mieszkania.html") Sprzątanie mieszkania
+                        li
+                            a(href="sprzatanie-po-remoncie.html") Sprzątanie po remoncie
+                h2.section__title Sprzątanie biura
+                p.service__description.section__description Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum iusto, tenetur doloremque at voluptatum deleniti veritatis rerum eveniet possimus nemo illum incidunt consectetur recusandae dicta, cupiditate itaque voluptatibus ipsa quaerat repellat, enim unde officiis iste! Ipsam adipisci quam, eius expedita perferendis aspernatur quo excepturi minus autem ullam exercitationem debitis odit quos recusandae numquam iste maiores officiis sint repellendus soluta similique fuga accusamus amet? Nisi harum eius porro minus reiciendis repellendus qui mollitia laborum enim quia! Cumque, fugit. Beatae repellat, tenetur neque minima amet minus quia non? Fugiat voluptatem, dolorum unde hic doloribus accusantium, corporis accusamus alias ratione consequuntur eveniet. Eaque in magni aliquam recusandae, dolore pariatur, iusto consequuntur illo error saepe sunt maxime laudantium delectus eius beatae earum, consequatur vero neque totam ducimus nobis atque! Ducimus unde eum illum iste minus natus, suscipit facilis eaque quo? Voluptas, facere rerum. Rem consequuntur deserunt amet inventore ducimus quod ipsa enim repudiandae perferendis.
+                .service__links
+                    a.service__link.button-link(href="../zamowic-usluge.html") Zamówić usługę
+                .service__slider-before.slider-before
+                    .slider-before__gallery
+                        .slider-before__resize
+                    .slider-before__line
+                        .slider-before__drag-line
+                            span
+                        input(type="range", class="slider-before__range", min="0", max="100", value="50")
+    include ../modules/footer-first
+    script(src="../script.js") 

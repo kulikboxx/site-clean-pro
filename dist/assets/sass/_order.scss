@@ -1,0 +1,212 @@
+.order {
+
+    .section__title,
+    .order__description {
+        text-align: center;
+    }
+
+    .form {
+        margin: 0 auto;
+        max-width: 900px;
+
+        &__wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        &__box {
+            display: flex;
+            flex-direction: column;
+            margin: 1.5em 0;
+            width: 100%;
+
+            &.packages {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            &.services {
+                select {
+                    text-align: center;
+                }
+            }
+
+            &.spaces {
+                display: none;
+            }
+
+            &.spaces.show {
+                display: flex;
+            }
+
+            &.total {
+                margin: 1em 0 3em;
+
+                label {
+                    font-size: 1.8rem;
+                }
+
+                .form__total {
+                    color: $white-color;
+                    font-size: 2rem;
+                    background-color: $main-color;
+                }
+            }
+
+            label {
+                margin-bottom: 0.2em;
+                color: $black-color;
+                font-size: 1.5rem;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+            }
+
+            input[type="text"],
+            input[type="tel"],
+            input[type="email"],
+            input[type="number"],
+            select,
+            textarea {
+                padding: 1em;
+                width: 100%;
+                color: $black-color;
+                font-size: 1.5rem;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+                background-color: $light-color;
+                border: none;
+                border-radius: 4px;
+
+                &:focus {
+                    outline: 1px solid $main-color;
+                }
+
+                &.error {
+                    outline: 1px solid #ff0000;
+                }
+            }
+
+            &.person {
+                position: relative;
+
+                span.form__error {
+                    position: absolute;
+                    top: 27px;
+                    right: 3px;
+                    color: #ff0000;
+                    font-size: 1.1rem;
+                }
+            }
+
+            &.agreement {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 0.5em;
+
+                input[type="checkbox"] {
+                    margin-bottom: 1em;
+
+                    &.error {
+                        outline: 2px solid #ff0000;
+                    }
+                }
+
+                label {
+                    margin: 0;
+                    color: $gray-color;
+                    font-size: 1.4rem;
+                    font-weight: 700;
+                    font-family: 'Roboto', sans-serif;
+                    line-height: 1.5;
+                }
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 150px;
+            }
+        }
+
+        &__heading {
+            margin-bottom: 0.8em;
+            width: 100%;
+            color: $black-color;
+            font-size: 2rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        &__radio {
+            display: flex;
+            align-items: center;
+            padding: 1em 1.5em;
+            width: max-content;
+
+            input[type="radio"].error::before {
+                outline: 2px solid #ff0000;
+            }
+
+            input[type="radio"]+label {
+                margin-bottom: 0;
+                padding: 0.3em 0.5em;
+                font-size: 1.5rem;
+                font-weight: 600;
+                font-family: 'Poppins', sans-serif;
+                -webkit-tap-highlight-color: transparent;
+                cursor: pointer;
+            }
+
+            input[type="radio"]~span {
+                margin-left: 0.3em;
+                padding: 0.3em 0.6em;
+                color: $white-color;
+                font-size: 1.5rem;
+                font-weight: 600;
+                background-color: $main-color;
+                border-radius: 4px;
+            }
+        }
+
+        &__submit {
+            display: block;
+            margin: 1em auto 0;
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .order {
+        .form {
+            &__box {
+                &.packages {
+                    .form__radio {
+                        flex-basis: 260px;
+                    }
+                }
+
+                &.spaces {
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    .form__radio {
+                        flex-basis: 250px
+                    }
+                }
+
+                &.additional,
+                &.person {
+                    width: 48.5%;
+                }
+
+                &.additional.ironing {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,172 @@
+doctype html
+html(lang="pl")
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel="icon", href="assets/img/favicon.png", type="image/png")
+    title CleanPro - Zamówić usługę
+    link(rel="stylesheet", href="assets/css/style.css")
+    script(src="https://kit.fontawesome.com/0c51b4e0d7.js", crossorigin="anonymous")
+  body(data-section="order")
+    include modules/header-zero
+    main
+        section.hero
+            h1.hero__title Oblicz wartość usługi
+            .hero__links
+                a(href="/") Home
+                span /
+                a(href="zamowic-usluge.html") Zamówić usługę
+        section.order.section
+            .wrapper
+                h2.section__title Zamów usługę
+                p.order__description.section__description Stworzyliśmy specjalny kalkulator za pomocą którego możesz obliczyć koszt sprzątania lokalu. 
+                    br
+                    strong Pakiet Miesięczny składa się z 4 usług, Roczny - z 48 usług.
+                form.order__form.form(data-calculator)
+                    .form__wrapper
+                        h3.form__heading Wybierz pakiet
+                        .form__box.packages
+                            .form__radio
+                                input(type="radio", class="form__input", name="package", id="once", data-discount="1", value="Jednorazowa usługa", checked)
+                                label(for="once") Jednorazowa usługa
+                            .form__radio
+                                input(type="radio", class="form__input", name="package", id="month", data-discount="0.9", value="Miesięczny")
+                                label(for="month") Miesięczny
+                                span Zniżka 10%
+                            .form__radio
+                                input(type="radio", class="form__input", name="package", id="year", data-discount="0.8", value="Roczny")
+                                label(for="year") Roczny
+                                span Zniżka 20%
+                        .form__box.services
+                            h3.form__heading Wybierz usługę
+                            select(name="service", class="form__input")
+                                option(value="Sprzątanie biura", data-service="office") Sprzątanie biura
+                                option(value="Sprzątanie domu", data-service="house") Sprzątanie domu
+                                option(value="Sprzątanie mieszkania", data-service="apartment") Sprzątanie mieszkania
+                                option(value="Sprzątanie po remoncie", data-service="repair") Sprzątanie po remoncie
+                        .form__box.spaces
+                            h3.form__heading Wybierz metraż biura
+                            .form__radio
+                                input(type="radio", class="form__input", name="office", id="office1", data-price="250", value="do 50 m2")
+                                label(for="office1") do 50 m2 - 250 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="office", id="office2", data-price="450", value="51 - 100 m2")
+                                label(for="office2") 51 - 100 m2 - 450 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="office", id="office3", data-price="670", value="101 - 150 m2")
+                                label(for="office3") 101 - 150 m2 - 670 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="office", id="office4", data-price="900", value="151 - 200 m2")
+                                label(for="office4") 151 - 200 m2 - 900 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="office", id="office5", data-price="1100", value="201 - 250 m2")
+                                label(for="office5") 201 - 250 m2 - 1100 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="office", id="office6", data-price="1300", value="250+ m2")
+                                label(for="office6") 250+ m2 - 1300 zł
+                        .form__box.spaces
+                            h3.form__heading Wybierz metraż domu
+                            .form__radio
+                                input(type="radio", class="form__input", name="house", id="house1", data-price="230", value="do 60 m2")
+                                label(for="house1") do 60 m2 - 230 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="house", id="house2", data-price="400", value="61 - 100 m2")
+                                label(for="house2") 61 - 100 m2 - 400 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="house", id="house3", data-price="570", value="101 - 140 m2")
+                                label(for="house3") 101 - 140 m2 - 570 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="house", id="house4", data-price="740", value="141 - 180 m2")
+                                label(for="house4") 141 - 180 m2 - 740 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="house", id="house5", data-price="900", value="181 - 220 m2")
+                                label(for="house5") 181 - 220 m2 - 900 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="house", id="house6", data-price="1050", value="220+ m2")
+                                label(for="house6") 220+ m2 - 1050 zł
+                        .form__box.spaces
+                            h3.form__heading Wybierz metraż mieszkania
+                            .form__radio
+                                input(type="radio", class="form__input", name="apartment", id="apartment1", data-price="140", value="do 40 m2")
+                                label(for="apartment1") do 40 m2 - 140 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="apartment", id="apartment2", data-price="270", value="41 - 80 m2")
+                                label(for="apartment2") 41 - 80 m2 - 270 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="apartment", id="apartment3", data-price="400", value="81 - 120 m2")
+                                label(for="apartment3") 81 - 120 m2 - 400 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="apartment", id="apartment4", data-price="530", value="121 - 160 m2")
+                                label(for="apartment4") 121 - 160 m2 - 530 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="apartment", id="apartment5", data-price="660", value="161 - 200 m2")
+                                label(for="apartment5") 161 - 200 m2 - 660 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="apartment", id="apartment6", data-price="800", value="200+ m2")
+                                label(for="apartment6") 200+ m2 - 800 zł
+                        .form__box.spaces
+                            h3.form__heading Wybierz metraż lokalu
+                            .form__radio
+                                input(type="radio", class="form__input", name="repair", id="repair1", data-price="400", value="do 50 m2")
+                                label(for="repair1") do 50 m2 - 400 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="repair", id="repair2", data-price="630", value="51 - 100 m2")
+                                label(for="repair2") 51 - 100 m2 - 630 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="repair", id="repair3", data-price="850", value="101 - 150 m2")
+                                label(for="repair3") 101 - 150 m2 - 850 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="repair", id="repair4", data-price="1100", value="151 - 200 m2")
+                                label(for="repair4") 151 - 200 m2 - 1100 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="repair", id="repair5", data-price="1450", value="201 - 250 m2")
+                                label(for="repair5") 201 - 250 m2 - 1450 zł
+                            .form__radio
+                                input(type="radio", class="form__input", name="repair", id="repair6", data-price="1700", value="250+ m2")
+                                label(for="repair6") 250+ m2 - 1700 zł
+                        h3.form__heading Dodatkowe usługi
+                        .form__box.additional
+                            label Mycie okien: 7 zł za m2 - wpisz ilość m2 
+                            input(type="number", class="form__input", name="window", value="0", min="0", data-price="7")
+                        .form__box.additional
+                            label Pranie dywanów: 7 zł za m2 - wpisz ilość m2 
+                            input(type="number", class="form__input", name="rug", value="0", min="0", data-price="7")
+                        .form__box.additional
+                            label Pranie tapicerki: 10 zł za m2 - wpisz ilość m2 
+                            input(type="number", class="form__input", name="upholstery", value="0", min="0", data-price="10")
+                        .form__box.additional
+                            label Pranie wykładzin: 5 zł za m2 - wpisz ilość m2 
+                            input(type="number", class="form__input", name="covering", value="0", min="0", data-price="5")
+                        .form__box.additional.ironing
+                            label Prasowanie: 3 zł/szt - wpisz ilość szt 
+                            input(type="number", class="form__input", name="ironing", value="0", min="0", data-price="3")
+                        .form__box.total
+                            label Ogółem
+                            input(type="text", class="form__input form__total", name="total", value="0 zł" min="0", disabled)
+                        h3.form__heading Podaj swoje dane:
+                        .form__box.person
+                            label Imię i nazwisko
+                            input(type="text", class="form__input", name="name")
+                            span.form__error
+                        .form__box.person
+                            label Telefon
+                            input(type="tel", class="form__input", name="phone")
+                            span.form__error
+                        .form__box.person
+                            label E-mail
+                            input(type="email", class="form__input", name="email")
+                            span.form__error
+                        .form__box.person
+                            label Adres
+                            input(type="text", class="form__input", name="address")
+                            span.form__error
+                        .form__box.message
+                            label Wiadomość
+                            textarea(name="message", class="form__input")
+                        .form__box.agreement
+                            input(type="checkbox", name="agreement", class="form__input", id="agreement", value="Administratorem danych osobowych jest firma CleanPro, która przetwarza dane osobowe w celach i na zasadach określonych w Polityce prywatności. Wyrażenie zgody jest dobrowolne. Przyjmuję do wiadomości, że przysługuje mi prawo do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem dotychczasowego przetwarzania.")
+                            label(for="agreement") Administratorem danych osobowych jest firma CleanPro, która przetwarza dane osobowe w celach i na zasadach określonych w Polityce prywatności. Wyrażenie zgody jest dobrowolne. Przyjmuję do wiadomości, że przysługuje mi prawo do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem dotychczasowego przetwarzania.*
+                        button(type="submit", class="form__submit button-submit") Wyślij formularz
+    include modules/footer-zero
+    script(src="script.js") 
